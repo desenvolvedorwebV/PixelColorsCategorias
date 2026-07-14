@@ -53,12 +53,20 @@ body{
     align-items:center;
     justify-content:space-between;
     gap:12px;
-    margin-bottom:4px;
+    margin-bottom:8px;
+    padding:12px 14px;
+    border:2px solid #ddd;
+    border-radius:14px;
+    background:white;
+    box-shadow:0 4px 8px rgba(0,0,0,.08);
 }
 
-.menuHeader h2{
-    font-size:18px;
+.menuTitle{
+    flex:1;
+    font-size:15px;
+    font-weight:700;
     color:#333;
+    text-align:center;
 }
 
 .menuBackButton{
@@ -69,6 +77,12 @@ body{
     border-radius:999px;
     cursor:pointer;
     font-weight:700;
+    transition:transform .15s ease, filter .15s ease;
+}
+
+.menuBackButton:hover{
+    filter:brightness(1.05);
+    transform:translateY(-1px);
 }
 
 #menuNivel .nivelCard:hover{
