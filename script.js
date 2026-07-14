@@ -139,7 +139,7 @@ function renderizarCategorias() {
 
         if (concluido === total && total > 0) {
             card.classList.add("completed");
-            badge.textContent = "Categoria concluída";
+            badge.textContent = "Concluída";
         } else if (concluido > 0) {
             badge.textContent = "Em andamento";
         } else {
