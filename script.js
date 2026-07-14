@@ -142,6 +142,7 @@ function renderizarCategorias() {
             badge.textContent = "Concluída";
         } else if (concluido > 0) {
             badge.textContent = "Em andamento";
+            badge.classList.add("partialCompleted");
         } else {
             badge.classList.add("neverCompleted");
             badge.textContent = "Sem progresso";
