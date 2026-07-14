@@ -35,6 +35,7 @@ let totalCells = 0;
 
 const board = document.getElementById("board");
 const palette = document.getElementById("palette");
+const menuHeader = document.getElementById("menuHeader");
 const menuNivel = document.getElementById("menuNivel");
 const gameBoard = document.getElementById("gameBoard");
 const backButton = document.getElementById("backButton");
@@ -89,6 +90,10 @@ async function carregarNiveis() {
 }
 
 function renderizarMenu() {
+    menuHeader.innerHTML = "";
+    menuHeader.classList.add("hidden");
+    menuHeader.classList.remove("visible");
+
     menuNivel.innerHTML = "";
     menuNivel.classList.remove("hidden");
     menuNivel.classList.add("visible");
@@ -103,10 +108,8 @@ function renderizarMenu() {
 }
 
 function renderizarCategorias() {
-    const cabecalho = document.createElement("div");
-    cabecalho.className = "menuHeader";
-    cabecalho.innerHTML = '<div class="menuTitle">Escolha uma categoria</div>';
-    menuNivel.appendChild(cabecalho);
+    menuHeader.className = "menuHeader visible";
+    menuHeader.innerHTML = '<div class="menuTitle">Escolha uma categoria</div>';
 
     categorias.forEach((categoria, index) => {
         const card = document.createElement("button");
@@ -162,20 +165,17 @@ function renderizarNiveisCategoria() {
         return;
     }
 
-    const cabecalho = document.createElement("div");
-    cabecalho.className = "menuHeader";
-    cabecalho.innerHTML = `
+    menuHeader.className = "menuHeader visible";
+    menuHeader.innerHTML = `
         <button type="button" class="menuBackButton">← Voltar</button>
         <div class="menuTitle">${categoria.nome}</div>
     `;
 
-    cabecalho.querySelector(".menuBackButton").addEventListener("click", () => {
+    menuHeader.querySelector(".menuBackButton").addEventListener("click", () => {
         categoriaAtual = null;
         menuModo = "categorias";
         renderizarMenu();
     });
-
-    menuNivel.appendChild(cabecalho);
 
     categoria.niveis.forEach((nivel, index) => {
         const card = document.createElement("button");
