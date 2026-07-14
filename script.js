@@ -105,7 +105,7 @@ function renderizarMenu() {
 function renderizarCategorias() {
     const cabecalho = document.createElement("div");
     cabecalho.className = "menuHeader";
-    cabecalho.innerHTML = "<h2>Escolha uma categoria</h2>";
+    cabecalho.innerHTML = '<div class="menuTitle">Escolha uma categoria</div>';
     menuNivel.appendChild(cabecalho);
 
     categorias.forEach((categoria, index) => {
@@ -166,7 +166,7 @@ function renderizarNiveisCategoria() {
     cabecalho.className = "menuHeader";
     cabecalho.innerHTML = `
         <button type="button" class="menuBackButton">← Voltar</button>
-        <h2>${categoria.nome}</h2>
+        <div class="menuTitle">${categoria.nome}</div>
     `;
 
     cabecalho.querySelector(".menuBackButton").addEventListener("click", () => {
