@@ -281,6 +281,8 @@ function abrirNivel(index) {
     carregarNivel(nivel);
     atualizarTituloNivel(nivel);
 
+    menuHeader.classList.remove("visible");
+    menuHeader.classList.add("hidden");
     menuNivel.classList.remove("visible");
     menuNivel.classList.add("hidden");
     gameBoard.classList.remove("hidden");
