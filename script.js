@@ -294,12 +294,19 @@ function atualizarTituloNivel(nivel) {
 }
 
 function voltarAoMenu() {
-    if (nivelAtual !== null) {
+    if (nivelAtual?.nivel) {
         nivelAtual = null;
+        menuModo = "levels";
+        renderizarMenu();
+        menuNivel.classList.remove("hidden");
+        menuNivel.classList.add("visible");
+        gameBoard.classList.remove("visible");
+        gameBoard.classList.add("hidden");
+        return;
     }
 
-    menuModo = "categorias";
     categoriaAtual = null;
+    menuModo = "categorias";
     renderizarMenu();
 }
 
