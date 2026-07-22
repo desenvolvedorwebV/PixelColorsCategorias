@@ -17,5 +17,11 @@
     "niveis": [
       "nivel-dodo-fantasma.pclv"
     ]
+  },
+  {
+    "nome": "Pokemon",
+    "niveis": [
+      "nivel-pkm0001.pclv"
+    ]
   }
 ]
