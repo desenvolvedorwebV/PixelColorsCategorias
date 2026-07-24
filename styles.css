@@ -294,9 +294,12 @@ body{
     align-items:center;
     justify-content:center;
     font-weight:bold;
-    font-size:clamp(10px,3vw,22px);
+    /*font-size:clamp(10px,3vw,22px);*/
+    font-size:25%;
     color:#555;
     transition:.12s;
+    width:32px;
+    height:32px;
 }
 
 .cell.blank{
